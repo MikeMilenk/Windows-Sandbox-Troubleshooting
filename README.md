@@ -6,7 +6,7 @@ Launch and test Windows Sandbox while following a training tutorial.
 
 ## Initial Setup
 
-My first attempt was performed on a Windows virtual machine running in Proxmox.
+My first attempt was performed on a Windows virtual machine running in [Proxmox](https://github.com/MikeMilenk/Installing-Proxmox-VE.git).
 
 I opened:
 
