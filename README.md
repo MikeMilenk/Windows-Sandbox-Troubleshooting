@@ -26,15 +26,14 @@ Windows Sandbox
 ![Sandbox Features](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/4bae257cef9c2a32470908bc50419df08ee100ad/Images/Sandbox%20Features.png)
 
 
-
 After rebooting, the virtual machine became extremely slow.
-![Low Performance Chart](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/4255c66848abbc74a47fe9934c715866166daa2b/Images/Low%20Performance.png)
 
 ## Investigation
 
 The issue was not caused by Windows Sandbox itself.
 
 The Windows VM was hosted on a small home lab server with 16 GB of RAM shared across multiple virtual machines. Due to resource limitations, I could not allocate more than 6 GB of RAM to the VM. After enabling the Hyper-V components required by Windows Sandbox, performance degraded significantly.
+![Low Performance Chart](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/4255c66848abbc74a47fe9934c715866166daa2b/Images/Low%20Performance.png)
 
 To eliminate resource constraints from the troubleshooting process, testing was moved to a physical Windows machine.
 
