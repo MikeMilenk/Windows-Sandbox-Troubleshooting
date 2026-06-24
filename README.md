@@ -13,6 +13,8 @@ I opened:
 ```text
 Control Panel → Programs and Features → Turn Windows features on or off
 ```
+![Control Panel](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/4bae257cef9c2a32470908bc50419df08ee100ad/Images/Control%20Panel.png)
+![Change Windows Features](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/4bae257cef9c2a32470908bc50419df08ee100ad/Images/Change%20Windows%20Features.png)
 
 and enabled Windows Sandbox and the required virtualization components
 ```text
@@ -20,8 +22,6 @@ Hyper-V
 Windows Hypervisor Platform
 Windows Sandbox
 ```
-![Control Panel](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/4bae257cef9c2a32470908bc50419df08ee100ad/Images/Control%20Panel.png)
-![Change Windows Features](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/4bae257cef9c2a32470908bc50419df08ee100ad/Images/Change%20Windows%20Features.png)
 ![Sandbox Features](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/4bae257cef9c2a32470908bc50419df08ee100ad/Images/Sandbox%20Features.png)
 
 
