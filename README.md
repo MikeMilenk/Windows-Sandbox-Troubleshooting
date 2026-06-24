@@ -13,6 +13,7 @@ I opened:
 ```text
 Control Panel → Programs and Features → Turn Windows features on or off
 ```
+If you can't find Programs and Features option, just change the "_View by:_" from _Category_ to _Small Icons_
 ![Control Panel](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/4bae257cef9c2a32470908bc50419df08ee100ad/Images/Control%20Panel.png)
 ![Change Windows Features](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/4bae257cef9c2a32470908bc50419df08ee100ad/Images/Change%20Windows%20Features.png)
 
