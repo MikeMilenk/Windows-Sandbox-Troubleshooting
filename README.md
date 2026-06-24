@@ -20,8 +20,14 @@ Hyper-V
 Windows Hypervisor Platform
 Windows Sandbox
 ```
+![Control Panel](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/4bae257cef9c2a32470908bc50419df08ee100ad/Images/Control%20Panel.png)
+![Change Windows Features](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/4bae257cef9c2a32470908bc50419df08ee100ad/Images/Change%20Windows%20Features.png)
+![Sandbox Features](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/4bae257cef9c2a32470908bc50419df08ee100ad/Images/Sandbox%20Features.png)
+
+
 
 After rebooting, the virtual machine became extremely slow.
+![Low Performance Chart](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/4255c66848abbc74a47fe9934c715866166daa2b/Images/Low%20Performance.png)
 
 ## Investigation
 
@@ -44,22 +50,30 @@ The installation completed successfully. I enabled Windows Sandbox and the requi
 ```text
 The connection to the Windows Sandbox environment was lost. Do you want to reconnect?
 ```
+![Sandbox Connection Issue](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/4bae257cef9c2a32470908bc50419df08ee100ad/Images/Sandbox%20Connection%20Issue.png)
 
 ---
 
 ## Troubleshooting
 
-To identify the cause, I reviewed Windows Sandbox configuration settings and policies.
+To identify the cause, I reviewed Windows Sandbox configuration settings and local group policies.
 
 During the investigation, I found the following policy:
 
 ```text
+gpedit.msc
+
 Computer Configuration
  └─ Administrative Templates
      └─ Windows Components
          └─ Windows Sandbox
              └─ Allow vGPU sharing for Windows Sandbox
 ```
+![gpedit](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/0f23f9ed68db37c691bf781b70440867c8650f37/Images/gpedit.png)
+![Path to Windows Sandbox](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/0f23f9ed68db37c691bf781b70440867c8650f37/Images/Path%20to%20Windows%20Sandbox.png)
+![vGPU Sharing](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/0f23f9ed68db37c691bf781b70440867c8650f37/Images/vGPU%20Sharing.png)
+![vGPU Sharing Disabled](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/0f23f9ed68db37c691bf781b70440867c8650f37/Images/vGPU%20Sharing%20Disabled.png)
+
 
 ---
 
@@ -84,3 +98,4 @@ Disabling vGPU sharing allowed Windows Sandbox to start normally.
 ## Result
 
 Windows Sandbox was successfully deployed and tested.
+![Sanbdox itself](https://github.com/MikeMilenk/Windows-Sandbox-Troubleshooting/blob/0f23f9ed68db37c691bf781b70440867c8650f37/Images/Sanbdox%20itself.png)
